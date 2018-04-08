@@ -1,10 +1,10 @@
 class Pokemon{
-    constructor(name,hp,attack,defense){
+    constructor(name,hp,attack,defense,abilities=[]){
         this.name = name
         this.hp = hp
         this.attack = attack
         this.defense = defense
-        this.abilities = []
+        this.abilities = abilities
     }
 
     addAbility(ability){
@@ -24,6 +24,14 @@ class Ronnie{
 
     add(pokemon){
         this.pokemon.push(pokemon)
+    }
+    
+    get(pokemonName){
+        for(i=0;i < this.all.length;i++){
+            if (this.all[i].name === pokemonName){
+                return this.all[i];
+            }
+        }
     }
 }
 
