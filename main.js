@@ -25,6 +25,13 @@ class Ronnie{
     add(pokemon){
         this.pokemon.push(pokemon)
     }
+    
+    get(pokemonName){
+        for(i=0;i < this.all.length;i++){
+            if (this.all[i].name === pokemonName){
+                return this.all[i];
+            }
+    
 }
 
 let ronnie = new Ronnie()
